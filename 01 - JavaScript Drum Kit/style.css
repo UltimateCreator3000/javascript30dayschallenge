@@ -1,0 +1,53 @@
+/** {
+	box-sizing: border-box;
+}*/
+
+html {
+  font-size: 10px;
+  background: url(http://i.imgur.com/b9r5sEL.jpg) bottom center;
+  background-size: cover;
+}
+
+body,html {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.keys {
+	display: flex;
+	flex: 1;
+	min-height: 100vh;
+	align-items: center; /* align items vertically */
+	justify-content: center; /* align items horizontally */
+	/*align-content: center;*/ /* align the flex lines (when there are multiple lines they must be handled too)*/
+}
+
+.key {
+	border: .4rem solid black;
+	border-radius: .5rem;
+	margin: 1rem;
+	font-size: 1.5rem;
+	padding: 1rem .5rem;
+	width: 10rem;
+	color: white;
+	text-align: center; /* within a div it will center the text of the elements */
+	transition: all .07s ease; /* a bit of pause when .playing class is added */
+	background: rgba(0, 0, 0, 0.4);
+	text-shadow: 0 0 .5rem black;
+}
+
+kbd {
+	display: block;
+	font-size: 4rem;
+}
+
+.sound {
+	font-size: 1.2rem;
+	text-transform: uppercase;
+	letter-spacing: .1rem;
+	color: #ffc600;
+}
+.playing {
+
+}
