@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>JS Quiz Application</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+	<form>
+		<p id="question">Hello. How are you ?</p>
+
+		<!-- radiobuttons: choosing the right question -->
+		<p class="answer"> 
+			<input class="radioBut" type="radio" name="input" value="0" checked>  
+			<span><strong>possible answer</strong></span>
+		</p>
+		<p class="answer"> 
+			<input class="radioBut" type="radio" name="input" value="1">  
+			<span>possible answer</span>
+		</p>
+		<p class="answer"> 
+			<input class="radioBut" type="radio" name="input" value="2">  
+			<span>possible answer</span>
+		</p>
+		<p class="answer"> 
+			<input class="radioBut" type="radio" name="input" value="3">  
+			<span>possible answer</span>
+		</p> 
+
+		<!-- button: changing the question (and submitting the data) -->
+		<input id="submit" type="submit" value="Next Question">
+	</form>
+
+
+	<script type="text/javascript" src="script.js"></script>
+</body>
+</html>
