@@ -1,8 +1,3 @@
-var options = document.getElementsByTagName("span");
-let length = options.length;
-var question = document.getElementById("question");
-var submit = document.querySelector("#submit");
-
 var allQuestions = [
 {question: "Who is Prime Minister of the United Kingdom?", 
 choices: ["Boris Johnson", "Gordon Brown", "Winston Churchill", "Tony Blair"], 
@@ -17,42 +12,49 @@ correctAnswer:2},
 choices: ["Dutch", "German", "French", "Belgian"], 
 correctAnswer:0}
 ];
-// We need question1, question2, etc.
-let questionNum = 2;
-let correctAnswer = allQuestions[questionNum].correctAnswer;
-let evalNote = 0;
-// or somehow make an increment each time the user press the submit button
-// maybe to build a linkedlist and work with it (next, previous) ?
-// ex - if submit then questionNum++;
+var options = document.getElementsByTagName("span");
+var question = document.getElementById("question");
+var submit = document.querySelector("#submit");
 
-init();
+const length = options.length; // actually you must count choices
+var answers = [];
+var nextQuestion = 0;
+
+
+/*init();
 
 function init(){
 	nextQuestion(1);
 	/*answer();
 	reset();*/
-}
+
+	
+
+	setQuestion(nextQuestion);
 
 
-submit.addEventListener("click", () => {
-	var answers = [];
-	var test = document.querySelector('input[name="input"]:checked').value;
-	if (test !== correctAnswer) {
-		evalNote--;
-	} else {
-		evalNote++;
+
+	function inputHandler() {
+		nextQuestion++;
+		if (nextQuestion  < 5) {
+			let correctAnswer = allQuestions[nextQuestion].correctAnswer;
+
+			var test = document.querySelector('input[name="input"]:checked').value;
+			answers.push(test);
+			console.log(answers);
+
+			setQuestion(nextQuestion);
+
+			console.log(nextQuestion);
+		} else {
+			console.log("you reached the limit of questions");
+		}
+
+	};
+
+	function setQuestion(num) {
+		question.textContent = allQuestions[nextQuestion].question;
+		for (let i = 0; i < length; i++) {
+			options[i].textContent = allQuestions[nextQuestion].choices[i];
+		}
 	}
-	console.log(evalNote);
-	nextQuestion(2);
-});
-
-
-function nextQuestion(plusOne) {
-		options[plusOne].textContent = allQuestions[plusOne].choices[plusOne];
-		question.textContent = allQuestions[plusOne].question;
-}
-
-
-
-
-
