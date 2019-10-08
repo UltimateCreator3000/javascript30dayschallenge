@@ -1,0 +1,81 @@
+*, *:before, *:after {
+	/* Chrome 9-, Safari 5-, iOS 4.2-, Android 3-, Blackberry 7- */
+	-webkit-box-sizing: border-box; 
+
+	/* Firefox (desktop or Android) 28- */
+	-moz-box-sizing: border-box;
+
+	/* Firefox 29+, IE 8+, Chrome 10+, Safari 5.1+, Opera 9.5+, iOS 5+, Opera Mini Anything, Blackberry 10+, Android 4+ */
+	box-sizing: border-box;
+}
+
+body, html {
+	margin: 0;
+	padding: 0;
+	/*background-color: black;*/
+}
+
+#main_wrapper {
+	max-width: 960px;
+	margin: auto;
+	border: 3px solid black;
+}
+
+#container1 {
+	text-align: center;
+}
+
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	background-color: #333;
+	height: 60px;
+	text-align: center;
+	line-height: 59px;
+}
+
+ul li {
+	display: inline-block;
+	margin: 0 40px 0 0; /* it must be 60px */
+	/* you need to make it responsive so it meintance
+	a good structure on smaller devices*/
+
+}
+
+li a {
+	display: block;
+	text-decoration: none;
+	font-size: 13px;
+	color: #c0c0c0;
+	font-family: "Arial";
+	font-weight: bold;
+}
+
+li a:hover {
+	background-color: #111;
+}
+
+
+h3, h1, button {
+	margin: 9px 30px 0 0;
+}
+
+h3 {
+	font-size: 30px;
+	letter-spacing: -1px;
+	color: #fe34da;
+	font-family: "Museo";
+	text-align: center;
+}
+
+h1 {
+	font-size: 60px;
+	letter-spacing: -3px;
+	color: #fe34da;
+	font-family: "Museo";
+	text-align: center;
+}
+
+
+/* Smaller devices (make it responsive) */
